@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Food.destroy_all 
+
+f1= Food.create(name:'Pizza',stars: 5)
+f2= Food.create(name:'Pasta',stars: 4.5)
+
+f1.Food_types.create(name:'Italian',country:'Italy')
+f2.Food_types.create(name:'Italian',country:'Italy')
+
+puts"Foods: #{Food.all.size}"
+puts"Food_type: #{Food.all.size}"
